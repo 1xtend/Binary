@@ -266,11 +266,6 @@ body {
   width: 33.333%;
   text-align: center;
 }
-@media (max-width: 758px) {
-  .about__card {
-    width: 50%;
-  }
-}
 @media (max-width: 480px) {
   .about__card {
     width: 80%;
