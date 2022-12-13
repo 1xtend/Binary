@@ -161,9 +161,6 @@ body {
     text-align: center;
   }
 
-  &__header {
-  }
-
   &__title {
     margin-bottom: 37px;
   }
@@ -204,11 +201,11 @@ body {
     text-align: center;
 
     @media (max-width: 758px) {
-      max-width: 50%;
+      width: 50%;
     }
 
     @media (max-width: 480px) {
-      width: 100%;
+      width: 80%;
     }
 
     h3 {

@@ -268,12 +268,12 @@ body {
 }
 @media (max-width: 758px) {
   .about__card {
-    max-width: 50%;
+    width: 50%;
   }
 }
 @media (max-width: 480px) {
   .about__card {
-    width: 100%;
+    width: 80%;
   }
 }
 .about__card h3 {
