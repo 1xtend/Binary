@@ -202,6 +202,11 @@ body {
   padding-bottom: 24px;
   margin-bottom: 130px;
 }
+@media (max-width: 480px) {
+  .header {
+    display: none;
+  }
+}
 .header__list {
   display: flex;
   align-items: center;
@@ -245,9 +250,31 @@ body {
   padding-bottom: 95px;
   gap: 25px;
 }
+@media (max-width: 768px) {
+  .about__footer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 480px) {
+  .about__footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .about__card {
   width: 33.333%;
   text-align: center;
+}
+@media (max-width: 758px) {
+  .about__card {
+    max-width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .about__card {
+    width: 100%;
+  }
 }
 .about__card h3 {
   font-size: 22px;

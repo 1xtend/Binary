@@ -129,6 +129,10 @@ body {
   padding-bottom: 24px;
   margin-bottom: 130px;
 
+  @media (max-width: 480px) {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;
@@ -183,11 +187,29 @@ body {
     margin: 0 auto;
     padding-bottom: 95px;
     gap: 25px;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__card {
     width: 33.333%;
     text-align: center;
+
+    @media (max-width: 758px) {
+      max-width: 50%;
+    }
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
 
     h3 {
       font-size: 22px;
