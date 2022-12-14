@@ -19,24 +19,24 @@
 @font-face {
   font-family: 'Lato';
   src: url('../fonts/Lato/Lato-Black.eot');
-  src: local('☺'), url('fonts/Lato-Regular.woff') format('woff'),
-    url('fonts/Lato-Regular.ttf') format('truetype'), url('fonts/Lato-Regular.svg') format('svg');
+  src: local('☺'), url('fonts/Lato-Black.woff') format('woff'),
+    url('fonts/Lato-Black.ttf') format('truetype'), url('fonts/Lato-Black.svg') format('svg');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
   src: url('../fonts/Lato/Lato-Bold.eot');
-  src: local('☺'), url('fonts/Lato-Regular.woff') format('woff'),
-    url('fonts/Lato-Regular.ttf') format('truetype'), url('fonts/Lato-Regular.svg') format('svg');
+  src: local('☺'), url('fonts/Lato-Bold.woff') format('woff'),
+    url('fonts/Lato-Bold.ttf') format('truetype'), url('fonts/Lato-Bold.svg') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
   src: url('../fonts/Lato/Lato-Light.eot');
-  src: local('☺'), url('fonts/Lato-Regular.woff') format('woff'),
-    url('fonts/Lato-Regular.ttf') format('truetype'), url('fonts/Lato-Regular.svg') format('svg');
+  src: local('☺'), url('fonts/Lato-Light.woff') format('woff'),
+    url('fonts/Lato-Light.ttf') format('truetype'), url('fonts/Lato-Light.svg') format('svg');
   font-weight: 300;
   font-style: normal;
 }
@@ -53,11 +53,25 @@ body {
   padding: 0 10px;
 }
 
+.button {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 16px 40px 18px 42px;
+  border: 1px solid #fff;
+}
+
 .hero {
   width: 100%;
   background: url(../img/hero/hero_bg.jpg) top no-repeat;
   padding: 165px 0 153px;
   margin-bottom: 22px;
+
+  @media (max-width: 480px) {
+    padding: 80px 0 153px;
+  }
 
   &__body {
     text-align: center;
@@ -65,6 +79,10 @@ body {
 
   &__header {
     margin-bottom: 160px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 100px;
+    }
   }
 
   &__main {
@@ -101,14 +119,7 @@ body {
   }
 
   &__button {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
     color: #ffffff;
-    padding: 16px 40px 18px 42px;
-    border: 1px solid #fff;
     position: relative;
 
     &::after {
@@ -262,14 +273,12 @@ body {
   padding-top: 107px;
 
   &__body {
+    text-align: center;
   }
 
   &__header {
     text-align: center;
     margin-bottom: 50px;
-  }
-
-  &__title {
   }
 
   .header_bottom {
@@ -280,6 +289,11 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px 27px;
+    margin-bottom: 64px;
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__img-card {
@@ -288,4 +302,50 @@ body {
       height: auto;
     }
   }
+
+  &__button {
+    border: 1px solid #000;
+    color: #000;
+    margin-bottom: 62px;
+  }
+}
+
+.partners {
+  background: url('../img/partners/partners_bg.png') bottom no-repeat;
+  padding-top: 100px;
+  &__body {
+    max-width: 585px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 93px;
+
+    h3 {
+      font-size: 30.4px;
+      line-height: 1.2;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: #ffffff;
+    }
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    padding-bottom: 105px;
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+}
+.container {
 }
