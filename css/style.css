@@ -368,6 +368,7 @@ body {
 .partners {
   background: url("../img/partners/partners_bg.png") bottom no-repeat;
   padding-top: 100px;
+  margin-bottom: 183px;
 }
 .partners__body {
   max-width: 585px;

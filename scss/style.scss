@@ -313,6 +313,8 @@ body {
 .partners {
   background: url('../img/partners/partners_bg.png') bottom no-repeat;
   padding-top: 100px;
+  margin-bottom: 183px;
+
   &__body {
     max-width: 585px;
     margin: 0 auto;
@@ -346,6 +348,4 @@ body {
   &__image {
     margin: 0 auto;
   }
-}
-.container {
 }
