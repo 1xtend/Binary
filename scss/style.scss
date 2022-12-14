@@ -125,9 +125,11 @@ body {
 }
 
 .header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  padding-bottom: 24px;
-  margin-bottom: 130px;
+  &.header_top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 24px;
+    margin-bottom: 130px;
+  }
 
   @media (max-width: 480px) {
     display: none;
@@ -182,7 +184,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding-bottom: 95px;
+    margin-bottom: 95px;
     gap: 25px;
 
     @media (max-width: 768px) {
@@ -199,10 +201,6 @@ body {
   &__card {
     width: 33.333%;
     text-align: center;
-
-    // @media (max-width: 758px) {
-    //   width: 50%;
-    // }
 
     @media (max-width: 480px) {
       width: 80%;
@@ -256,5 +254,38 @@ body {
     bottom: 0;
     left: 50%;
     margin-left: -40.5px;
+  }
+}
+
+.portfolio {
+  background-color: #f3f3f3;
+  padding-top: 107px;
+
+  &__body {
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+  }
+
+  .header_bottom {
+    margin-bottom: 136px;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 27px;
+  }
+
+  &__img-card {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
