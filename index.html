@@ -24,19 +24,27 @@
         </div>
       </div>
     </div>
-    <div class="header header_top">
-      <div class="container">
-        <nav class="header__list">
-          <a href="#" class="header__link">Home</a>
-          <a href="#" class="header__link">About us</a>
-          <a href="#" class="header__link">Portfolio</a>
-          <a href="#" class="header__link">Contact</a>
-        </nav>
-      </div>
-    </div>
+
     <div class="about">
       <div class="container">
         <div class="about__body">
+          <div class="navbar navbar_1">
+            <div class="navbar__body">
+              <div class="navbar__burger">
+                <button class="navbar__btn" type="button" data-list="nav-1">
+                  <img src="./img/burger/open.svg" alt="" />
+                </button>
+              </div>
+
+              <!-- 9587  9932  &#10005; -->
+              <div class="navbar__list" id="nav-1">
+                <a href="#" class="navbar__link">Home</a>
+                <a href="#" class="navbar__link">About us</a>
+                <a href="#" class="navbar__link">Portfolio</a>
+                <a href="#" class="navbar__link">Contact</a>
+              </div>
+            </div>
+          </div>
           <div class="about__header">
             <h2 class="about__title title">About</h2>
           </div>
@@ -87,13 +95,20 @@
           <div class="portfolio__header">
             <h2 class="portfolio__title title">Portfolio</h2>
           </div>
-          <div class="header header_bottom">
-            <nav class="header__list">
-              <a href="#" class="header__link">All</a>
-              <a href="#" class="header__link">Web us</a>
-              <a href="#" class="header__link">Apps</a>
-              <a href="#" class="header__link">Other</a>
-            </nav>
+          <div class="navbar navbar_2">
+            <div class="navbar__body">
+              <div class="navbar__burger">
+                <button class="navbar__btn" type="button" data-list="nav-2">
+                  <img src="./img/burger/open.svg" alt="" />
+                </button>
+              </div>
+              <div class="navbar__list" id="nav-2">
+                <a href="#" class="navbar__link">Home</a>
+                <a href="#" class="navbar__link">About us</a>
+                <a href="#" class="navbar__link">Portfolio</a>
+                <a href="#" class="navbar__link">Contact</a>
+              </div>
+            </div>
           </div>
           <div class="portfolio__images">
             <div class="portfolio__img-card">
@@ -209,5 +224,25 @@
         </div>
       </div>
     </div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <div class="footer__header">
+            <img src="./img/footer/footer_logo.png" alt="logo" />
+          </div>
+          <div class="footer__contacts">
+            <a href="#" class="footer__link">Home</a>
+            <a href="#" class="footer__link">Facebook</a>
+            <a href="#" class="footer__link">Lenkedin</a>
+            <a href="#" class="footer__link">Contact</a>
+          </div>
+          <div class="footer__copyright">
+            <p>© 2015. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/menu-burger.js"></script>
   </body>
 </html>

@@ -91,35 +91,31 @@ h6 {
 @font-face {
   font-family: "Conv_MYRIADPRO-REGULAR";
   src: url("../fonts/MyriadPro/MYRIADPRO-REGULAR.eot");
-  src: local("☺"), url("fonts/MYRIADPRO-REGULAR.woff") format("woff"), url("fonts/MYRIADPRO-REGULAR.ttf") format("truetype"), url("fonts/MYRIADPRO-REGULAR.svg") format("svg");
+  src: local("☺"), url("../fonts/MYRIADPRO-REGULAR.woff") format("woff"), url("../fonts/MYRIADPRO-REGULAR.ttf") format("truetype"), url("../fonts/MYRIADPRO-REGULAR.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato/Lato-Regular.eot");
-  src: local("☺"), url("fonts/Lato-Regular.woff") format("woff"), url("fonts/Lato-Regular.ttf") format("truetype"), url("fonts/Lato-Regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato/Lato-Black.eot");
-  src: local("☺"), url("fonts/Lato-Black.woff") format("woff"), url("fonts/Lato-Black.ttf") format("truetype"), url("fonts/Lato-Black.svg") format("svg");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato/Lato-Bold.eot");
-  src: local("☺"), url("fonts/Lato-Bold.woff") format("woff"), url("fonts/Lato-Bold.ttf") format("truetype"), url("fonts/Lato-Bold.svg") format("svg");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Lato";
   src: url("../fonts/Lato/Lato-Light.eot");
-  src: local("☺"), url("fonts/Lato-Light.woff") format("woff"), url("fonts/Lato-Light.ttf") format("truetype"), url("fonts/Lato-Light.svg") format("svg");
   font-weight: 300;
   font-style: normal;
 }
@@ -182,6 +178,11 @@ body {
   margin-left: -52.5px;
   background-color: #fff;
 }
+@media (max-width: 480px) {
+  .hero__main {
+    margin-bottom: 160px;
+  }
+}
 .hero__title {
   font-size: 34px;
   line-height: 40px;
@@ -210,30 +211,78 @@ body {
   margin-left: -8.5px;
 }
 
-.header.header_top {
+.navbar__body {
+  position: relative;
+}
+.navbar__burger {
+  display: none;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .navbar__burger {
+    display: block;
+  }
+}
+.navbar__btn {
+  background: none;
+  border: none;
+}
+.navbar__btn img {
+  height: 20px;
+}
+.navbar__list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+@media (max-width: 480px) {
+  .navbar__list {
+    display: none;
+  }
+}
+.navbar__list.active {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+  background-color: #fff;
+  z-index: 2;
+  padding: 20px 0;
+}
+.navbar__link {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #3c3c3c;
+  text-transform: uppercase;
+  transition: color 0.2s linear;
+}
+.navbar__link:hover {
+  color: #ada074;
+}
+
+.navbar_1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   padding-bottom: 24px;
   margin-bottom: 130px;
 }
 @media (max-width: 480px) {
-  .header {
-    display: none;
+  .navbar_1 {
+    margin-bottom: 80px;
   }
 }
-.header__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+
+.navbar_2 {
+  margin-bottom: 136px;
 }
-.header__link {
-  color: #3c3c3c;
-  font-size: 15px;
-  text-transform: uppercase;
-  transition: color 0.2s;
+@media (max-width: 480px) {
+  .navbar_2 {
+    margin-bottom: 80px;
+  }
 }
-.header__link:hover {
-  color: #ada074;
+.navbar_2 .navbar__list.active {
+  background-color: #f3f3f3;
 }
 
 .about .container {
@@ -370,6 +419,11 @@ body {
   padding-top: 100px;
   margin-bottom: 183px;
 }
+@media (max-width: 480px) {
+  .partners {
+    margin-bottom: 100px;
+  }
+}
 .partners__body {
   max-width: 585px;
   margin: 0 auto;
@@ -407,6 +461,11 @@ body {
 .contact__header {
   text-align: center;
   margin-bottom: 120px;
+}
+@media (max-width: 480px) {
+  .contact__header {
+    margin-bottom: 90px;
+  }
 }
 .contact__main {
   display: flex;
@@ -515,4 +574,37 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: #000000;
+}
+
+.footer {
+  background-color: #3c3c3c;
+  padding: 48px 0;
+}
+.footer__body {
+  text-align: center;
+}
+.footer__header {
+  margin-bottom: 41px;
+}
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 34px;
+}
+.footer__link {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #a4a4a4;
+  transition: color 0.2s linear;
+}
+.footer__link:hover {
+  color: rgb(139, 139, 139);
+}
+.footer__copyright {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #6c6c6c;
 }
